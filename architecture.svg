@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+  <rect width="1100" height="520" fill="#f5f7f4"/>
+  <text x="70" y="65" font-family="Arial" font-size="32" font-weight="700" fill="#111513">StackWorks — Campus Connect Architecture</text>
+  <g font-family="Arial">
+    <rect x="90" y="150" width="250" height="130" rx="20" fill="#111513"/>
+    <text x="215" y="205" text-anchor="middle" font-size="23" font-weight="700" fill="white">Web Frontend</text>
+    <text x="215" y="240" text-anchor="middle" font-size="16" fill="#c9f36a">HTML · CSS · JavaScript</text>
+    <rect x="425" y="150" width="250" height="130" rx="20" fill="#0b7a53"/>
+    <text x="550" y="205" text-anchor="middle" font-size="23" font-weight="700" fill="white">Express API</text>
+    <text x="550" y="240" text-anchor="middle" font-size="16" fill="white">Routes · Services · Controllers</text>
+    <rect x="760" y="150" width="250" height="130" rx="20" fill="#dcefdc"/>
+    <text x="885" y="205" text-anchor="middle" font-size="23" font-weight="700" fill="#111513">MongoDB</text>
+    <text x="885" y="240" text-anchor="middle" font-size="16" fill="#0b7a53">Users · Events · Registrations</text>
+    <path d="M340 215 H425" stroke="#111513" stroke-width="4" marker-end="url(#a)"/>
+    <path d="M675 215 H760" stroke="#111513" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="240" y="355" width="620" height="85" rx="18" fill="white" stroke="#dce3dd" stroke-width="2"/>
+    <text x="550" y="390" text-anchor="middle" font-size="18" font-weight="700" fill="#111513">MongoDB capabilities used</text>
+    <text x="550" y="418" text-anchor="middle" font-size="15" fill="#65706a">Indexes · Aggregations · Transactions · References · Unique constraints</text>
+  </g>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111513"/>
+    </marker>
+  </defs>
+</svg>

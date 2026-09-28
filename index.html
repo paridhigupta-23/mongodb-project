@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Connect | StackWorks</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">SW</div>
+      <div>
+        <strong>Campus Connect</strong>
+        <span>StackWorks · MongoDB</span>
+      </div>
+    </div>
+    <div class="status"><span></span> MongoDB-backed prototype</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CODE FOR CHANGE</p>
+        <h1>Campus events,<br><em>connected.</em></h1>
+        <p class="hero-copy">
+          Discover events, register without duplicates, and turn registration data
+          into useful organizer insights.
+        </p>
+        <div class="hero-actions">
+          <a href="#events" class="primary">Explore events</a>
+          <button class="secondary" id="refreshBtn">Refresh analytics</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <span>LIVE DATA MODEL</span>
+        <strong>Users → Events → Registrations</strong>
+        <small>Indexes · Aggregations · Transactions</small>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <article><span>Events</span><strong id="eventCount">—</strong></article>
+      <article><span>Registrations</span><strong id="registrationCount">—</strong></article>
+      <article><span>Upcoming</span><strong id="upcomingCount">—</strong></article>
+      <article><span>Seat utilization</span><strong id="utilization">—</strong></article>
+    </section>
+
+    <section class="section" id="events">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DISCOVER</p>
+          <h2>Upcoming events</h2>
+        </div>
+        <select id="categoryFilter">
+          <option value="">All categories</option>
+          <option>Technology</option>
+          <option>Design</option>
+          <option>Business</option>
+          <option>Community</option>
+          <option>Workshop</option>
+        </select>
+      </div>
+      <div class="event-grid" id="eventGrid"></div>
+    </section>
+
+    <section class="section analytics">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MONGODB AGGREGATION</p>
+          <h2>Event analytics</h2>
+        </div>
+      </div>
+      <div class="analytics-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Category</th>
+              <th>Registrations</th>
+              <th>Capacity</th>
+              <th>Utilization</th>
+            </tr>
+          </thead>
+          <tbody id="analyticsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="registerDialog">
+    <form method="dialog" id="registerForm">
+      <button class="close" value="cancel">×</button>
+      <p class="eyebrow">REGISTRATION</p>
+      <h2 id="dialogTitle">Register</h2>
+      <p id="dialogMeta"></p>
+      <label>Choose demo student
+        <select id="studentSelect">
+          <option value="">Loading students…</option>
+        </select>
+      </label>
+      <input type="hidden" id="eventId" />
+      <button class="primary full" type="submit">Confirm registration</button>
+      <p class="message" id="formMessage"></p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
